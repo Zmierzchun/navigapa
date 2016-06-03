@@ -1,0 +1,3 @@
+ugm_homepage:
+    path:     /
+    defaults: { _controller: UgmBundle:Default:index }

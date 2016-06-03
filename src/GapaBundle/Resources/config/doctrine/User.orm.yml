@@ -1,0 +1,17 @@
+GapaBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: GapaBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        tracks:
+            targetEntity: GapaBundle\Entity\Track
+            mappedBy: user
+
+
+    lifecycleCallbacks: {  }

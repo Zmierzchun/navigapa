@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>Navi</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    {% block stylesheets %}
+        <link href="{{ asset('css/cyborg.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+
+    {% endblock %}
+
+
+</head>
+<body>
+
+    {% block nav %}
+        {{ include('GapaBundle:Default:nav.html.twig') }}
+    {% endblock %}
+
+    {# MODALS #}
+    {% block modals %}
+        {# @TODO add parameters to show different types of modal windows#}
+        {{ include('GapaBundle:Default:custom_modal.html.twig') }}
+
+        {{ include('@Ugm/login_modal.html.twig') }}
+    {% endblock %}
+    <!-- CONTENTS  -->
+    <div class="container-fluid">
+    {% block dashboard %}
+        {{ include('GapaBundle:Default:dashboard.html.twig') }}
+    {% endblock %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    </div>
+     {% block js %}
+        {{ include('GapaBundle:Default:scripts.html.twig') }}
+     {% endblock %}
+</body>
+</html>

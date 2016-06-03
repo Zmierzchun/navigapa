@@ -1,0 +1,28 @@
+{% block modals %}
+<div id="modalBox" role="dialog" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" data-dismiss="modal" class="close">&times;</button>
+                <h4 id="modal-title" class="modal-title">Opcje</h4>
+            </div>
+            <div class="modal-body">
+                <h5>Limity prędkości i jednostki miary</h5>
+                <div class="btn-group">
+                    <button id="speedYellowLimit" type="button" onclick="changeYellowSpeedLimit()" class="btn btn-warning">50</button>
+                    <button id="speedRedLimit" type="button" onclick="changeRedSpeedLimit()" class="btn btn-danger">90</button>
+                    <button id="units" type="button" onclick="toggleUnits()" class="btn btn-default">metryczne</button>
+                </div>
+                <h5>Dane GPS</h5>
+                <div class="btn-group">
+                    <p id="toggleTrackGPSLbl" class="btn btn-primary">Zapis ścieżki</p>
+                    <button id="toggleTrackGPS" type="button" onclick="toggleTrackGPS()" class="btn btn-default">WYŁĄCZONY</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

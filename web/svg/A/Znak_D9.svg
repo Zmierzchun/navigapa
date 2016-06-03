@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   width="406"
+   height="512"
+   id="svg10889">
+  <desc
+     id="desc10891">wmf2svg</desc>
+  <defs
+     id="defs10904">
+    <pattern
+       id="pattern4002"
+       patternTransform="translate(18.50938,18)"
+       height="476"
+       width="370"
+       patternUnits="userSpaceOnUse">
+      <rect
+         style="fill:#00e5ff;fill-opacity:1"
+         id="rect2240"
+         width="370"
+         height="476"
+         x="0"
+         y="0"
+         rx="20"
+         ry="20" />
+    </pattern>
+    <pattern
+       id="pattern4002-1"
+       patternTransform="translate(18.50938,18)"
+       height="476"
+       width="370"
+       patternUnits="userSpaceOnUse">
+      <rect
+         style="fill:#00e5ff;fill-opacity:1"
+         id="rect2240-7"
+         width="370"
+         height="476"
+         x="0"
+         y="0"
+         rx="20"
+         ry="20" />
+    </pattern>
+  </defs>
+  <rect
+     width="406"
+     height="512"
+     rx="38"
+     ry="38"
+     x="0"
+     y="0"
+     id="rect1363"
+     style="fill:#003399;fill-opacity:1" />
+  <rect
+     width="394"
+     height="500"
+     rx="32"
+     ry="32"
+     x="6"
+     y="6"
+     id="rect1365"
+     style="fill:none;stroke:#ffffff;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  <rect
+     width="370"
+     height="476"
+     rx="20"
+     ry="20"
+     x="18.509384"
+     y="18"
+     id="rect4005"
+     style="fill:#003399;fill-opacity:1;stroke:none" />
+  <g
+     id="g5265">
+    <polygon
+       points="125.32,242.89 132.8,280.84 87.372,280.84 94.932,242.89 38.052,242.89 38.052,223.88 416.92,223.88 416.92,242.89 416.92,242.89 359.96,242.89 367.52,280.84 322.02,280.84 329.65,242.89 "
+       transform="matrix(0.92197507,0,0,0.83559037,-3.45009,6.3744223)"
+       id="polygon4644"
+       style="fill:#ffffff" />
+    <g
+       id="g5257">
+      <g
+         transform="translate(4,0)"
+         id="g5247">
+        <path
+           d="m 183.98166,250.6147 -56.25029,0 -40.65247,231.38333 83.61772,0 13.35203,0 -0.067,-231.38333 z"
+           id="path5243"
+           style="fill:#ffffff" />
+        <path
+           d="m 140.27808,182.4284 0,0 L 166.20482,30 l 17.67011,0 0.42936,152.4284 -44.02621,0 z"
+           id="path5245"
+           style="fill:#ffffff" />
+      </g>
+      <g
+         transform="matrix(-1,0,0,1,407.38319,0)"
+         id="g5251">
+        <path
+           d="m 183.98166,250.6147 -56.25029,0 -40.65247,231.38333 83.61772,0 13.35203,0 -0.067,-231.38333 z"
+           id="path5253"
+           style="fill:#ffffff" />
+        <path
+           d="m 140.27808,182.4284 0,0 L 166.20482,30 l 17.67011,0 0.42936,152.4284 -44.02621,0 z"
+           id="path5255"
+           style="fill:#ffffff" />
+      </g>
+    </g>
+  </g>
+</svg>

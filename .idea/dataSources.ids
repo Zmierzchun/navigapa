@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - gapa@localhost" uuid="5027e5e0-9090-4d6c-bdb0-50095023a314">
+    <database-info product="MySQL" version="5.5.49-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="gapa"/>
+      <table id="2" parent="1" name="location"/>
+      <table id="3" parent="1" name="vehicle"/>
+      <table id="4" parent="1" name="vehicle_location"/>
+      <column id="5" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="6" parent="2" name="latitude">
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="7" parent="2" name="longitude">
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="8" parent="2" name="direction">
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="9" parent="2" name="speed">
+        <mandatory>1</mandatory>
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="10" parent="2" name="acceleration">
+        <data-type>decimal(10)</data-type>
+      </column>
+      <column id="11" parent="2" name="time">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="12" parent="2" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="13" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="14" parent="3" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="15" parent="3" name="plate">
+        <mandatory>1</mandatory>
+        <data-type>varchar(8)</data-type>
+      </column>
+      <index id="16" parent="3" name="UNIQ_1B80E4865E237E06">
+        <columns>name</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="17" parent="3" name="UNIQ_1B80E486719ED75B">
+        <columns>plate</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="18" parent="3" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <key id="19" parent="3" name="UNIQ_1B80E4865E237E06">
+        <columns>name</columns>
+        <underlying-index>UNIQ_1B80E4865E237E06</underlying-index>
+      </key>
+      <key id="20" parent="3" name="UNIQ_1B80E486719ED75B">
+        <columns>plate</columns>
+        <underlying-index>UNIQ_1B80E486719ED75B</underlying-index>
+      </key>
+      <column id="21" parent="4" name="vehicle_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="22" parent="4" name="location_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="23" parent="4" name="IDX_838C865F545317D1">
+        <columns>vehicle_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="24" parent="4" name="IDX_838C865F64D218E">
+        <columns>location_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="25" parent="4" name="PRIMARY">
+        <columns>vehicle_id
+location_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="26" parent="4" name="FK_838C865F545317D1">
+        <columns>vehicle_id</columns>
+        <ref-key>~.vehicle.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="27" parent="4" name="FK_838C865F64D218E">
+        <columns>location_id</columns>
+        <ref-key>~.location.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
+</component>

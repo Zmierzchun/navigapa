@@ -1,0 +1,29 @@
+{% block dashboard %}
+
+    <div class="row row-no-gutter">
+        <div class="col-xs-5 no-gutter">
+            <div id="speed"></div>
+        </div>
+        <div class="col-xs-7 no-gutter">
+            <div class="row row-no-gutter">
+                <div class="col-xs-4 no-gutter">
+                    <div id="compassCtrl" class="controls side-control bg-default"></div>
+                    <div id="unitCtrl" class="controls side-control bg-default">km/h</div>
+                </div>
+                <div class="col-xs-8">
+                    <div id="arrow"><img src="{{ asset('svg/arrow.svg') }}" width="100%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-group-justified btn-lg">
+        <button type="button" data-toggle="modal" data-target="#modalBox" class="btn btn-default btn-block">Opcje</button>
+    </div>
+    <div class="row row-no-gutter">
+        <div class="col-xs-12 no-gutter">
+            <div id="prompt"></div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

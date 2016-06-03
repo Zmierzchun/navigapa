@@ -1,0 +1,14 @@
+gapa_homepage:
+    path:     /
+    defaults: { _controller: GapaBundle:Default:index }
+
+gapa_ajaxGetPositionData:
+    path:     /getPositionData
+    defaults: { _controller: GapaBundle:Default:ajaxGetPositionData }
+
+gapa_ajaxGetTrackData:
+    path:     /getTrackData
+    defaults: { _controller: GapaBundle:Default:responseTrackData }
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

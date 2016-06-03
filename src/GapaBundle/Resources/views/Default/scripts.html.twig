@@ -1,0 +1,17 @@
+{% block js%}
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
+
+    <!-- Project specific scripts -->
+
+    <script async defer src="{{ asset('js/options.js') }}">//this goes first!!!</script>
+    <script async defer src="{{ asset('js/geolocation.js') }}"></script>
+    <script async defer src="{{ asset('js/path.js') }}"></script>
+    <script async defer src="{{ asset('js/ui.js') }}"></script>
+
+    <!-- Excluded -->
+    <!-- <script async src="http://maps.googleapis.com/maps/api/js"></script> -->
+{% endblock %}

@@ -1,0 +1,54 @@
+{% block modals %}
+<div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><a href="{{ path('fos_user_security_login') }}">Zaloguj</a></h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        {{ app.user.username }} |
+                        <a href="{{ path('fos_user_security_logout') }}">
+                            {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                        </a>
+                    {% else %}
+                        <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+                    {% endif %}
+                </div>
+
+                {% for type, messages in app.session.flashBag.all %}
+                    {% for message in messages %}
+                        <div class="{{ type }}">
+                            {{ message|trans({}, 'FOSUserBundle') }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                <p>Aby się zalogować podaj swoje dane.</p>
+
+                <form action="{{ path("fos_user_security_check") }}" method="post" role="form">
+                    {#<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />#}
+                    <div class="form-group">
+                        <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
+                        <input class="form-control" type="text" id="username" name="_username" value="" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+                        <input class="form-control" type="password" id="password" name="_password" required="required" />
+                    </div>
+                    <div class="checkbox">
+                        <input class="form-control" type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                        <label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <form role="form">
+                    <input type="submit" id="_submit" name="_submit" data-dismiss="modal" value="Zaloguj"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

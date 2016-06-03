@@ -1,0 +1,57 @@
+GapaBundle\Entity\Location:
+    type: entity
+    table: null
+    repositoryClass: GapaBundle\Repository\LocationRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        latitude:
+            type: decimal
+            precision: 10
+            scale: 7
+        longitude:
+            type: decimal
+            precision: 10
+            scale: 7
+        accuracy:
+            type: decimal
+            precision: 10
+            scale: 3
+        direction:
+            type: decimal
+            precision: 10
+            scale: 7
+        speed:
+            type: decimal
+            precision: 10
+            scale: 7
+        altitude:
+            type: decimal
+            precision: 5
+            scale: 5
+        altAcc:
+            type: decimal
+            precision: 5
+            scale: 5
+        time:
+            type: time
+            nullable: true
+
+    manyToMany:
+        vehicles:
+            targetEntity: GapaBundle\Entity\Vehicle
+            mappedBy: locations
+
+    manyToOne:
+        track:
+            targetEntity: GapaBundle\Entity\Track
+            inversedBy: locations
+    oneToOne:
+        crossing:
+            targetEntity: GapaBundle\Entity\Crossing
+            inversedBy: location
+    lifecycleCallbacks: {  }
